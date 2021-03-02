@@ -5,7 +5,7 @@ def sep_words(name: str, sep: str, lower: bool = False, upper: bool = False, cap
     A general use version of mc_id(name) with no default word-seperator and extra formatting options
     '''
 
-def mc_id(name: str,mc=False) -> str:
+def mc_id(name: str = "",mc: bool = False) -> str:
     '''
     Turns string to lowercase,
     Splits words in string into a list,
@@ -16,6 +16,9 @@ def mc_id(name: str,mc=False) -> str:
     return "_".join(name.lower().split())
 
 def give_item():
+    '''
+    Returns command to /give player item{user-specified parameters}
+    '''
     enchantments = set()
 
     print("Input Item: ",end="") 
